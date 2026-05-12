@@ -1,0 +1,15 @@
+{
+    "name": "localdatamanager",
+    "version": "0.0.1",
+    "type": "module",
+    "dependencies": {
+        "learnhypertext": "^2.0.3"
+    },
+    "scripts": {
+        "build": "node build.js",
+        "start": "node dev/server.js"
+    },
+    "devDependencies": {
+        "eslint": "^8.47.0"
+    }
+}
