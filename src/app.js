@@ -23,6 +23,7 @@ const oAppConfiguration = {
         }
         return sResourcePath;
     },
+    maxDataObjectSize: 10000,
 };
 
 const oDataController = new DataController();

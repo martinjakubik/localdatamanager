@@ -130,8 +130,9 @@ class DataController {
     handleDataDownloadButtonClick (event) {
         let oTarget = event.target;
         const sKey = oTarget.id;
-        const aDataObject = this.getDataModel();
-        const sContent = JSON.stringify(aDataObject);
+        const oStorageArea = window.localStorage;
+        const oItem = oStorageArea.getItem(sKey);
+        const sContent = JSON.stringify(oItem);
         const a = document.createElement('a');
         a.href = `data:application/json,${sContent}`;
         a.download = `${dataObjectName}-${sKey}.${dataObjectExtension}`;
