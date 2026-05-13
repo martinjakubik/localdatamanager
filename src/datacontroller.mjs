@@ -1,10 +1,24 @@
-import { createDiv, createButton } from '../../lib/js/learnhypertext.mjs';
+import { createDiv, createButton } from './learnhypertext.mjs';
 
-const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS_SHORT = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+];
+
 const dataObjectExtension = 'dataobject';
+const dataObjectName = 'datasample';
 
 class DataController {
-
     constructor () {
         this.getDataModel;
         this.setDataModel;
@@ -42,10 +56,17 @@ class DataController {
     handleLoadFileInputChange () {
         const aFiles = document.getElementById('uploadDataObjectButton').files;
         const reader = new FileReader();
-        reader.addEventListener('load', () => {
-            const aDataObject = this.validateDataObject.call(this, reader.result);
-            this.setDataModel.call(this, aDataObject);
-        }, false);
+        reader.addEventListener(
+            'load',
+            () => {
+                const aDataObject = this.validateDataObject.call(
+                    this,
+                    reader.result,
+                );
+                this.setDataModel.call(this, aDataObject);
+            },
+            false,
+        );
 
         if (aFiles && aFiles.length > 0) {
             const oFile = aFiles[0];
@@ -65,8 +86,17 @@ class DataController {
 
     makeUploadDataObjectButton (parentBox) {
         const sAccept = `.${dataObjectExtension}`;
-        this.uploadDataObjectButton = this.createFileInput.call(this, 'uploadDataObjectButton', 'Upload', parentBox, sAccept);
-        this.uploadDataObjectButton.addEventListener('change', this.handleLoadFileInputChange.bind(this));
+        this.uploadDataObjectButton = this.createFileInput.call(
+            this,
+            'uploadDataObjectButton',
+            'Upload',
+            parentBox,
+            sAccept,
+        );
+        this.uploadDataObjectButton.addEventListener(
+            'change',
+            this.handleLoadFileInputChange.bind(this),
+        );
     }
 
     makeDataButtonBar (fnGetDataModel, fnSetDataModel, fnResetDataModel) {
@@ -104,7 +134,7 @@ class DataController {
         const sContent = JSON.stringify(aDataObject);
         const a = document.createElement('a');
         a.href = `data:application/json,${sContent}`;
-        a.download = `planets-${sKey}.${dataObjectExtension}`;
+        a.download = `${dataObjectName}-${sKey}.${dataObjectExtension}`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -126,10 +156,14 @@ class DataController {
         oLoadButton.onclick = this.handleLoadDataButtonClick.bind(this);
         const oAdditionalButtons = createDiv(key, oItem);
         oAdditionalButtons.className = 'additionalButtons';
-        const oDownloadButton = createButton(key, null, oAdditionalButtons);
+        const oDownloadButton = createButton(
+            key,
+            'Download',
+            oAdditionalButtons,
+        );
         oDownloadButton.className = 'download';
         oDownloadButton.onclick = this.handleDataDownloadButtonClick.bind(this);
-        const oDeleteButton = createButton(key, null, oAdditionalButtons);
+        const oDeleteButton = createButton(key, 'Delete', oAdditionalButtons);
         oDeleteButton.className = 'delete';
         oDeleteButton.onclick = this.handleDataDeleteButtonClick.bind(this);
     }
@@ -172,7 +206,11 @@ class DataController {
             oInput.accept = sAccept;
         }
 
-        const oStylishButton = createButton(sId + 'StylishButton', sLabel, oParent);
+        const oStylishButton = createButton(
+            sId + 'StylishButton',
+            sLabel,
+            oParent,
+        );
         oStylishButton.classList.add('inputStylishButton');
 
         oStylishButton.appendChild(oInput);
@@ -195,8 +233,13 @@ class DataController {
     }
 
     makeDataView (appController, resetViewAndModel) {
-        this.dataView = createDiv('dataView'),
-        this.makeDataButtonBar.call(this, appController.getDataModel, appController.setDataModel, appController.resetDataModel);
+        ((this.dataView = createDiv('dataView')),
+        this.makeDataButtonBar.call(
+            this,
+            appController.getDataModel,
+            appController.setDataModel,
+            appController.resetDataModel,
+        ));
         this.makeLoadBar.call(this, resetViewAndModel);
     }
 }

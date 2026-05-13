@@ -1,3 +1,6 @@
+import { DataController } from './datacontroller.mjs';
+import { AppController } from './appcontroller.mjs';
+
 const getSiteRoot = function () {
     return 'https://www.supertitle.org';
 };
@@ -16,12 +19,13 @@ const oAppConfiguration = {
             sResourcePath = `${sSiteRoot}/${sResourceValue}`;
             break;
         default:
-
             return null;
         }
         return sResourcePath;
-    }
+    },
 };
 
-const oController = {};
-oController.appConfiguration = oAppConfiguration;
+const oDataController = new DataController();
+oDataController.appConfiguration = oAppConfiguration;
+const oAppController = new AppController();
+oDataController.makeDataView(oAppController, oAppController.resetViewAndModel);
