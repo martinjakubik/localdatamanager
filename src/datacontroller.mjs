@@ -63,7 +63,7 @@ class DataController {
                     this,
                     reader.result,
                 );
-                this.setDataModel.call(this, aDataObject);
+                this.setDataModel(aDataObject);
             },
             false,
         );
@@ -124,13 +124,13 @@ class DataController {
         const oStorageArea = window.localStorage;
         const oItem = oStorageArea.getItem(sKey);
         const aLoadedDataObject = JSON.parse(oItem);
-        this.setDataModel.call(this, aLoadedDataObject);
+        this.setDataModel(aLoadedDataObject);
     }
 
     handleDataDownloadButtonClick (event) {
         let oTarget = event.target;
         const sKey = oTarget.id;
-        const aDataObject = this.getDataModel.call(this);
+        const aDataObject = this.getDataModel();
         const sContent = JSON.stringify(aDataObject);
         const a = document.createElement('a');
         a.href = `data:application/json,${sContent}`;
