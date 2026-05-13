@@ -1,0 +1,402 @@
+[
+  {
+    "id": "0000000",
+    "response": "no"
+  },
+  {
+    "id": "0000001",
+    "response": "no"
+  },
+  {
+    "id": "0000010",
+    "response": "no"
+  },
+  {
+    "id": "0000011",
+    "response": "no"
+  },
+  {
+    "id": "0000100",
+    "response": "no"
+  },
+  {
+    "id": "0000020",
+    "response": "no"
+  },
+  {
+    "id": "0000110",
+    "response": "no"
+  },
+  {
+    "id": "0002181",
+    "response": "no"
+  },
+  {
+    "id": "0001000",
+    "response": "no"
+  },
+  {
+    "id": "0001001",
+    "response": "no"
+  },
+  {
+    "id": "0000200",
+    "response": "no"
+  },
+  {
+    "id": "0000201",
+    "response": "no"
+  },
+  {
+    "id": "0001100",
+    "response": "no"
+  },
+  {
+    "id": "0001020",
+    "response": "no"
+  },
+  {
+    "id": "0021810",
+    "response": "no"
+  },
+  {
+    "id": "0021811",
+    "response": "no"
+  },
+  {
+    "id": "0010000",
+    "response": "no"
+  },
+  {
+    "id": "0010001",
+    "response": "no"
+  },
+  {
+    "id": "0010010",
+    "response": "no"
+  },
+  {
+    "id": "0010011",
+    "response": "no"
+  },
+  {
+    "id": "0002000",
+    "response": "no"
+  },
+  {
+    "id": "0002001",
+    "response": "no"
+  },
+  {
+    "id": "0002010",
+    "response": "no"
+  },
+  {
+    "id": "0002011",
+    "response": "no"
+  },
+  {
+    "id": "0011000",
+    "response": "no"
+  },
+  {
+    "id": "0011001",
+    "response": "no"
+  },
+  {
+    "id": "0010200",
+    "response": "no"
+  },
+  {
+    "id": "0010201",
+    "response": "no"
+  },
+  {
+    "id": "0218100",
+    "response": "no"
+  },
+  {
+    "id": "0011020",
+    "response": "no"
+  },
+  {
+    "id": "0218110",
+    "response": "no"
+  },
+  {
+    "id": "0218111",
+    "response": "no"
+  },
+  {
+    "id": "0100000",
+    "response": "no"
+  },
+  {
+    "id": "0100001",
+    "response": "no"
+  },
+  {
+    "id": "0100010",
+    "response": "no"
+  },
+  {
+    "id": "0100011",
+    "response": "no"
+  },
+  {
+    "id": "0100100",
+    "response": "no"
+  },
+  {
+    "id": "0100020",
+    "response": "no"
+  },
+  {
+    "id": "0100110",
+    "response": "no"
+  },
+  {
+    "id": "0102181",
+    "response": "no"
+  },
+  {
+    "id": "0020000",
+    "response": "no"
+  },
+  {
+    "id": "0020001",
+    "response": "no"
+  },
+  {
+    "id": "0020010",
+    "response": "no"
+  },
+  {
+    "id": "0020011",
+    "response": "no"
+  },
+  {
+    "id": "0020100",
+    "response": "no"
+  },
+  {
+    "id": "0020834",
+    "response": "no"
+  },
+  {
+    "id": "0020110",
+    "response": "no"
+  },
+  {
+    "id": "0022181",
+    "response": "no"
+  },
+  {
+    "id": "0110000",
+    "response": "no"
+  },
+  {
+    "id": "0110001",
+    "response": "no"
+  },
+  {
+    "id": "0110010",
+    "response": "no"
+  },
+  {
+    "id": "0110011",
+    "response": "no"
+  },
+  {
+    "id": "0102000",
+    "response": "no"
+  },
+  {
+    "id": "0102001",
+    "response": "no"
+  },
+  {
+    "id": "0102010",
+    "response": "no"
+  },
+  {
+    "id": "0102011",
+    "response": "no"
+  },
+  {
+    "id": "2181000",
+    "response": "no"
+  },
+  {
+    "id": "2181001",
+    "response": "no"
+  },
+  {
+    "id": "0110200",
+    "response": "no"
+  },
+  {
+    "id": "0110201",
+    "response": "no"
+  },
+  {
+    "id": "2181100",
+    "response": "no"
+  },
+  {
+    "id": "2181020",
+    "response": "no"
+  },
+  {
+    "id": "2181110",
+    "response": "no"
+  },
+  {
+    "id": "2181111",
+    "response": "no"
+  },
+  {
+    "id": "1000000",
+    "response": "no"
+  },
+  {
+    "id": "1000001",
+    "response": "no"
+  },
+  {
+    "id": "1000010",
+    "response": "no"
+  },
+  {
+    "id": "1000011",
+    "response": "no"
+  },
+  {
+    "id": "1000100",
+    "response": "no"
+  },
+  {
+    "id": "1000020",
+    "response": "no"
+  },
+  {
+    "id": "1000110",
+    "response": "no"
+  },
+  {
+    "id": "1002181",
+    "response": "no"
+  },
+  {
+    "id": "1001000",
+    "response": "no"
+  },
+  {
+    "id": "1001001",
+    "response": "no"
+  },
+  {
+    "id": "1000200",
+    "response": "no"
+  },
+  {
+    "id": "1000201",
+    "response": "no"
+  },
+  {
+    "id": "1001100",
+    "response": "no"
+  },
+  {
+    "id": "1001020",
+    "response": "no"
+  },
+  {
+    "id": "1021810",
+    "response": "no"
+  },
+  {
+    "id": "1021811",
+    "response": "no"
+  },
+  {
+    "id": "0200000",
+    "response": "no"
+  },
+  {
+    "id": "0200001",
+    "response": "no"
+  },
+  {
+    "id": "0200010",
+    "response": "no"
+  },
+  {
+    "id": "0200011",
+    "response": "no"
+  },
+  {
+    "id": "0200100",
+    "response": "no"
+  },
+  {
+    "id": "0200834",
+    "response": "no"
+  },
+  {
+    "id": "0200110",
+    "response": "no"
+  },
+  {
+    "id": "0202181",
+    "response": "no"
+  },
+  {
+    "id": "0201000",
+    "response": "no"
+  },
+  {
+    "id": "0201001",
+    "response": "no"
+  },
+  {
+    "id": "0208340",
+    "response": "no"
+  },
+  {
+    "id": "0208341",
+    "response": "no"
+  },
+  {
+    "id": "0201100",
+    "response": "no"
+  },
+  {
+    "id": "0201834",
+    "response": "no"
+  },
+  {
+    "id": "0221810",
+    "response": "no"
+  },
+  {
+    "id": "0221811",
+    "response": "no"
+  },
+  {
+    "id": "1100000",
+    "response": "no"
+  },
+  {
+    "id": "1100001",
+    "response": "no"
+  },
+  {
+    "id": "1100010",
+    "response": "no"
+  },
+  {
+    "id": "1100011",
+    "response": "no"
+  }
+]
