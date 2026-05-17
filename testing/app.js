@@ -1,4 +1,4 @@
-import { DataController } from './datacontroller.mjs';
+import { DataController } from '../src/datacontroller.mjs';
 import { AppController } from './appcontroller.mjs';
 
 const getSiteRoot = function () {

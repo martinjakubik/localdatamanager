@@ -1,8 +1,10 @@
 import * as oFs from 'fs/promises';
 
 const sApplicationSourcePath = './src';
-const sApplicationDistributionPath = './app';
-const sLibPath = './app';
+const sApplicationDistributionPath = './lib';
+const sApplicationTestHarnessSourcePath = './testsrc';
+const sApplicationTestHarnessPath = './testing';
+const sLibPath = `${sApplicationTestHarnessPath}/lib`;
 
 const oMkDirOptions = {
     recursive: true,
@@ -17,7 +19,7 @@ oFs.mkdir(sApplicationDistributionPath, oMkDirOptions)
     .then(() => {
         console.log(`[success] mkdir ${sApplicationDistributionPath}`);
 
-        // copies src to app directory
+        // copies src to distribution directory
         oFs.cp(
             sApplicationSourcePath,
             sApplicationDistributionPath,
@@ -25,6 +27,27 @@ oFs.mkdir(sApplicationDistributionPath, oMkDirOptions)
         )
             .then(() => {
                 console.log(`[success] copied dir ${sApplicationSourcePath}`);
+            })
+            .catch((oError) => {
+                console.log(`  [error] details: ${oError}`);
+            });
+    })
+    .catch((oError) => {
+        console.log(`  [error] details: ${oError}`);
+    });
+
+oFs.mkdir(sApplicationTestHarnessPath, oMkDirOptions)
+    .then(() => {
+        console.log(`[success] mkdir ${sApplicationTestHarnessPath}`);
+
+        // copies src to test harness directory
+        oFs.cp(
+            sApplicationTestHarnessSourcePath,
+            sApplicationTestHarnessPath,
+            oSrcToDistCopyOptions,
+        )
+            .then(() => {
+                console.log(`[success] copied dir ${sApplicationTestHarnessSourcePath}`);
             })
             .catch((oError) => {
                 console.log(`  [error] details: ${oError}`);
