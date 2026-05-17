@@ -1,6 +1,6 @@
 {
     "name": "localdatamanager",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "module",
     "dependencies": {
         "learnhypertext": "^2.0.3"
