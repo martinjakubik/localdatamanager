@@ -4,7 +4,7 @@ node_modules
 
 src
 
-testssrc
+testsrc
 testing/lib
 
 dev/server.js
