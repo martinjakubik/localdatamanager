@@ -1,10 +1,10 @@
 import * as oFs from 'fs/promises';
 
-const sApplicationSourcePath = './src';
-const sApplicationDistributionPath = './lib';
-const sApplicationTestHarnessSourcePath = './testsrc';
-const sApplicationTestHarnessPath = './testing';
-const sLibPath = `${sApplicationTestHarnessPath}/lib`;
+const sPackageSourcePath = './src';
+const sPackageDistributionPath = './lib';
+const sPackageTestHarnessSourcePath = './testsrc';
+const sPackageTestHarnessPath = './testing';
+const sLibPath = `${sPackageTestHarnessPath}/lib`;
 
 const oMkDirOptions = {
     recursive: true,
@@ -15,18 +15,18 @@ const oSrcToDistCopyOptions = {
     recursive: true,
 };
 
-oFs.mkdir(sApplicationDistributionPath, oMkDirOptions)
+oFs.mkdir(sPackageDistributionPath, oMkDirOptions)
     .then(() => {
-        console.log(`[success] mkdir ${sApplicationDistributionPath}`);
+        console.log(`[success] mkdir ${sPackageDistributionPath}`);
 
         // copies src to distribution directory
         oFs.cp(
-            sApplicationSourcePath,
-            sApplicationDistributionPath,
+            sPackageSourcePath,
+            sPackageDistributionPath,
             oSrcToDistCopyOptions,
         )
             .then(() => {
-                console.log(`[success] copied dir ${sApplicationSourcePath}`);
+                console.log(`[success] copied dir ${sPackageSourcePath}`);
             })
             .catch((oError) => {
                 console.log(`  [error] details: ${oError}`);
@@ -36,18 +36,18 @@ oFs.mkdir(sApplicationDistributionPath, oMkDirOptions)
         console.log(`  [error] details: ${oError}`);
     });
 
-oFs.mkdir(sApplicationTestHarnessPath, oMkDirOptions)
+oFs.mkdir(sPackageTestHarnessPath, oMkDirOptions)
     .then(() => {
-        console.log(`[success] mkdir ${sApplicationTestHarnessPath}`);
+        console.log(`[success] mkdir ${sPackageTestHarnessPath}`);
 
         // copies src to test harness directory
         oFs.cp(
-            sApplicationTestHarnessSourcePath,
-            sApplicationTestHarnessPath,
+            sPackageTestHarnessSourcePath,
+            sPackageTestHarnessPath,
             oSrcToDistCopyOptions,
         )
             .then(() => {
-                console.log(`[success] copied dir ${sApplicationTestHarnessSourcePath}`);
+                console.log(`[success] copied dir ${sPackageTestHarnessSourcePath}`);
             })
             .catch((oError) => {
                 console.log(`  [error] details: ${oError}`);
