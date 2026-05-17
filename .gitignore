@@ -6,5 +6,7 @@ app
 
 lib
 
+testing
+
 dev/server.js
 dev/404.html
