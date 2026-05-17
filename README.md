@@ -1,2 +1,2 @@
 # Local Data Manager
-Re-usable interface to manage data locally in the browser.
+Re-usable interface to manage application data locally in the browser.
